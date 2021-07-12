@@ -43,7 +43,13 @@ Constraints:
 // Return true if the given number is a lucky number else return False
 
 bool isLucky(int n) {
-    // write your code here
+    static int c=2;
+ if(c>n)
+  return 1;
+ if(c%n==0)
+  return 0;
+ int next= n - (n/c);
+  return isLucky(next);
 }
 
 // Driver Code Starts.
